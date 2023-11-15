@@ -44,6 +44,10 @@ public class Player
     public double HollingerAssistRatio => Percentage(Assists,
         TwoPointsAttempted + ThreePointsAttempted + 0.475 * FreeThrowsAttempted + Assists + Turnovers);
     
+    private static double Percentage(double part, double total) => Ratio(part, total) * 100;
+    
+    private static double Ratio(double a, double b) => b != 0 ? a / b : 0;
+    
     public static Player operator +(Player a, Player b)
     {
         a.FreeThrowsMade += b.FreeThrowsMade;
@@ -61,7 +65,4 @@ public class Player
         
         return a;
     }
-
-    private static double Percentage(double a, double b) => Ratio(a, b) * 100;
-    private static double Ratio(double a, double b) => b != 0 ? a / b : 0;
 }

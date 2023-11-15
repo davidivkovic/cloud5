@@ -7,7 +7,7 @@ namespace Cloud5.Services;
 
 /// <summary>
 /// This service runs automatically when the application starts.
-/// Reads player data from a CSV file and saves it to the database.
+/// It reads player data from a CSV file and saves it to the database.
 /// The file path can be specified using the environment variable <b>CSV_PLAYER_DATA</b>.
 /// The default path is <b>./Data/Players.csv</b>
 /// </summary>
@@ -29,8 +29,9 @@ public class PlayerProcessor : BackgroundService
         
         await using var scope = _services.CreateAsyncScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        
-        _logger.LogInformation("Saving {Count} players to database", players.Count);
+
+        if (players.Count == 0) _logger.LogWarning("No players found in file {Path}", path);
+        else _logger.LogInformation("Saving {Count} players to database", players.Count);
         
         dbContext.AddRange(players);
         await dbContext.SaveChangesAsync(cancellationToken);

@@ -23,6 +23,12 @@ public record AdvancedStats(
     double HollingerAssistRatio
 );
 
+/// <summary>
+/// Represents the <see cref="Traditional"/> and <see cref="Advanced"/>
+/// stats for all the games of a player combined.
+/// The contained percentages are rounded to one decimal point.
+/// All other stats are averaged per game and rounded as well.
+/// </summary>
 public class PlayerStats
 {
     public string PlayerName { get; init; }

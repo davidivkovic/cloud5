@@ -28,7 +28,7 @@ public static class CsvPlayerParser
     public static List<Player> Parse(string filePath)
     {
         var lines = GetLinesFromFile(filePath);
-        return ParsePlayers(lines);
+        return ParseLines(lines);
     }
     
     /// <summary>Parses an array of CSV lines into a list of players.</summary>
@@ -40,13 +40,13 @@ public static class CsvPlayerParser
     /// <param name="lines">The CSV lines to be parsed.</param>
     /// <param name="skipHeader">Whether to skip the first line (header) or not.</param>
     /// <returns>A list of players or an empty list if the file does not exist or is empty.</returns>
-    public static List<Player> ParsePlayers(string[] lines, bool skipHeader = true)
+    public static List<Player> ParseLines(string[] lines, bool skipHeader = true)
     {
         var players = new Dictionary<string, Player>();
-        var startIndex = skipHeader ? 1 : 0;
+        // Skip the first line (header) if required and the file is not empty
+        var start = lines.Length > 0 && skipHeader ? 1 : 0;
         
-        // Skip the first line (header)
-        foreach (var line in lines[startIndex..])
+        foreach (var line in lines[start..])
         {
             if (string.IsNullOrWhiteSpace(line)) continue;
             
@@ -80,8 +80,8 @@ public static class CsvPlayerParser
         return players.Values.ToList();
     }
 
-    private static PlayerPosition ParsePosition(string value) =>
-        Enum.TryParse<PlayerPosition>(value.Trim(), out var position) ? position : default;
+    private static PlayerPosition ParsePosition(string? value) =>
+        Enum.TryParse<PlayerPosition>(value?.Trim(), out var position) ? position : default;
     
-    private static int ParseInt(string value) => int.TryParse(value.Trim(), out var number) ? number : 0;
+    private static int ParseInt(string? value) => int.TryParse(value?.Trim(), out var number) ? number : 0;
 }

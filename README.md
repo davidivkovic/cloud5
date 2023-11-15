@@ -99,7 +99,7 @@ Content-Type: application/json
 
 An example request for a player that doesn't exist, returning `HTTP 404`:
 ```http request
-GET http://localhost:5180/stats/player/Sifiso Abdalla
+GET http://localhost:5180/stats/player/Random Name
 ```
 ```http request
 HTTP/1.1 404 Not Found
@@ -109,10 +109,9 @@ Content-Type: text/plain
 ```
 
 ## Testing
+The tests were included in the application project itself for the sake of simplicity. The `dotnet` CLI is required in order to run the unit tests. 
 
-The `dotnet` CLI is required in order to run the unit tests. 
-
-Run the `dotnet test` command in your terminal to get the test report.
+Run the `dotnet test` command in your terminal to get the test report:
 
 ```
 Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 19 ms - Cloud5.dll (net7.0)

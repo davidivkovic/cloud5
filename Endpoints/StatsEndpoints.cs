@@ -20,7 +20,7 @@ public class StatsEndpoints
         CancellationToken cancellationToken
     )
     {
-        logger.LogInformation("Getting stats for player {Name}", fullName);
+        logger.LogInformation("Getting stats for player {Name}", fullName?.Trim());
         
         var stats = await query.Execute(fullName, cancellationToken);
         return stats is null ? Results.NotFound("Player not found") : Results.Ok(stats);

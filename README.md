@@ -117,3 +117,8 @@ Run the `dotnet test` command in your terminal to get the test report:
 ```
 Passed!  - Failed:     0, Passed:     5, Skipped:     0, Total:     1, Duration: 19 ms - Cloud5.dll (net7.0)
 ```
+
+## Extra
+
+The docker container image runs on the `dotnet/aspnet:7.0-jammy-chiseled` base image, which is based on Ubuntu 22.04.
+To learn more about chiseled images and the size optimizations they provide, check out this [microsoft blog post](https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/).

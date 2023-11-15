@@ -3,8 +3,8 @@ A Levi9 cloud hackathon. This application aggregates the match data of basketbal
 
 ## Built using 🔧
 
-- &nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxo1QGx_G_1-2qBwh3RMPocLoKxD782w333Q&usqp=CAU" align="center" width="24" height="24"/> <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">&nbsp; ASP.NET 7 + Entity Framework 7 </a>
-- <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" align="center" width="40" height="34"/><a href="https://www.docker.com/"> Docker </a>
+- &nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxo1QGx_G_1-2qBwh3RMPocLoKxD782w333Q&usqp=CAU" align="center" width="28" height="28"/> <a href="https://dotnet.microsoft.com/en-us/apps/aspnet"> ASP.NET 7 + Entity Framework 7 </a>
+- <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" align="center" width="40" height="34"/><a href="https://www.docker.com/">Docker </a>
 
 ## Installation options
 1. The easiest way to get started is using the provided Docker image.

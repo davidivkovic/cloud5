@@ -51,7 +51,7 @@ public static class CsvPlayerParser
             if (string.IsNullOrWhiteSpace(line)) continue;
             
             var values = line.Split(',');
-            if (values.Length < NumberOfColumns) continue;
+            if (values.Length != NumberOfColumns) continue;
             
             var player = new Player
             {
@@ -80,8 +80,10 @@ public static class CsvPlayerParser
         return players.Values.ToList();
     }
 
+    // Safely parse PlayerPosition enum
     private static PlayerPosition ParsePosition(string? value) =>
         Enum.TryParse<PlayerPosition>(value?.Trim(), out var position) ? position : default;
     
-    private static int ParseInt(string? value) => int.TryParse(value?.Trim(), out var number) ? number : 0;
+    // Since the data is not validated, we need to make sure the values are positive numbers
+    private static int ParseInt(string? value) => int.TryParse(value?.Trim(), out var number) ? Math.Abs(number) : 0;
 }

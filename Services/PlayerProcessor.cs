@@ -7,7 +7,7 @@ namespace Cloud5.Services;
 
 /// <summary>
 /// This service runs automatically when the application starts.
-/// It reads player data from a CSV file and saves it to the database.
+/// It reads the player data from a CSV file and saves it to the database.
 /// The file path can be specified using the environment variable <b>CSV_PLAYER_DATA</b>.
 /// The default path is <b>./Data/Players.csv</b>
 /// </summary>

@@ -46,7 +46,7 @@ public class Player
     
     private static double Percentage(double part, double total) => Ratio(part, total) * 100;
     
-    private static double Ratio(double a, double b) => b != 0 ? a / b : 0;
+    private static double Ratio(double a, double b) => b > 0 ? a / b : 0;
     
     public static Player operator +(Player a, Player b)
     {

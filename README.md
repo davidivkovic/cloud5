@@ -3,8 +3,9 @@ A Levi9 cloud hackathon. This application aggregates the match data of basketbal
 
 ## Built using 🔧
 
-- &nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxo1QGx_G_1-2qBwh3RMPocLoKxD782w333Q&usqp=CAU" align="center" width="28" height="28"/> <a href="https://dotnet.microsoft.com/en-us/apps/aspnet"> ASP.NET 7 + Entity Framework 7 </a>
-- <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" align="center" width="40" height="34"/><a href="https://www.docker.com/">Docker </a>
+- &nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxo1QGx_G_1-2qBwh3RMPocLoKxD782w333Q&usqp=CAU" align="center" width="28" height="28"/> <a href="https://dotnet.microsoft.com/en-us/apps/aspnet"> ASP.NET 7 + Entity Framework 7 </a> for the application
+- &nbsp;<img src="https://www.automatetheplanet.com/wp-content/uploads/2023/04/nUnit-logo.png" align="center" width="32" height="32"/><a href="https://nunit.org/"> NUnit </a> for testing
+- <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" align="center" width="40" height="34"/><a href="https://www.docker.com/">Docker </a> for containerization
 
 ## Installation options
 1. The easiest way to get started is using the provided Docker image.
@@ -114,5 +115,5 @@ The tests were included in the application project itself for the sake of simpli
 Run the `dotnet test` command in your terminal to get the test report:
 
 ```
-Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 19 ms - Cloud5.dll (net7.0)
+Passed!  - Failed:     0, Passed:     5, Skipped:     0, Total:     1, Duration: 19 ms - Cloud5.dll (net7.0)
 ```

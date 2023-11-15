@@ -30,16 +30,16 @@ _(Optional)_ To set your own CSV file containing player data, mount it as a volu
 
 ### Method 2: Dotnet CLI
    
- - Run the app on port **5180** `dotnet run`
+ - Run the app on port **5180**: `dotnet run`
 
 _(Optional)_ To set your own CSV file containing player data, simply replace the contents of the `/Data/Players.csv` file with your own.
 
 _(Optional)_ Another way to do this is by setting the `CSV_PLAYER_DATA` environment variable to the path of
 your file. For example:
-- Windows Powershell: `$env:CSV_PLAYER_DATA='C:/Downloads/MyPlayerData.csv'; dotnet run`
 - Linux Bash: `export CSV_PLAYER_DATA=~/Downloads/MyPlayerData.csv; dotnet run`
+- Windows Powershell: `$env:CSV_PLAYER_DATA='C:/Downloads/MyPlayerData.csv'; dotnet run`
 
-## Data Format
+## CSV Data Format
 
 The format of the data to provide in the CSV files is given in the following example:
 ```
@@ -58,7 +58,7 @@ An example request for the player _Sifiso Abdalla_, using the provided CSV data 
 ```http request
 GET http://localhost:5180/stats/player/Sifiso Abdalla
 ```
-```json
+```http request
 HTTP/1.1 200 OK
 Content-Type: application/json
         
@@ -101,7 +101,7 @@ An example request for a player that doesn't exist, returning `HTTP 404`:
 ```http request
 GET http://localhost:5180/stats/player/Sifiso Abdalla
 ```
-```json
+```http request
 HTTP/1.1 404 Not Found
 Content-Type: text/plain
 

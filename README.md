@@ -1,5 +1,7 @@
 # Cloud5
-A Levi9 cloud hackathon. This application aggregates the match data of basketball players and calculates their statistics.
+A Levi9 cloud hackathon. 
+
+This application aggregates the match data of basketball players and calculates their statistics.
 
 ## Built using 🔧
 
